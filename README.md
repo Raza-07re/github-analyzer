@@ -1,7 +1,8 @@
- GitHub Analyzer
+# GitHub Analyzer
 
 A beginner-friendly Python project that analyzes public GitHub profiles and repositories using the GitHub API.
 
+## Features
 
 - Get GitHub profile information
 - Display followers and following
@@ -12,6 +13,7 @@ A beginner-friendly Python project that analyzes public GitHub profiles and repo
 - Calculate total forks
 - Find the most popular repository
 
+## Technologies
 
 - Python
 - GitHub API
