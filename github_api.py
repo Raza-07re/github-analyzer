@@ -1,8 +1,3 @@
-"""Helpers for reading public GitHub data through the REST API.
-
-Set GITHUB_TOKEN in your environment to use authenticated requests and
-increase the API rate limit. A token is optional for public profiles.
-"""
 import os
 
 import requests
@@ -23,7 +18,6 @@ def _headers():
 
 
 def _get(url, params=None):
-    """Send a GET request and raise a helpful error for API failures."""
     response = requests.get(
         url,
         headers=_headers(),
@@ -48,12 +42,10 @@ def _get(url, params=None):
 
 
 def get_user(username):
-    """Return public profile data, or None if the username does not exist."""
     return _get(f"{BASE_URL}/users/{username}")
 
 
 def get_repositories(username):
-    """Return all public repositories, requesting up to 100 per page."""
     url = f"{BASE_URL}/users/{username}/repos"
     repositories = []
     page = 1
